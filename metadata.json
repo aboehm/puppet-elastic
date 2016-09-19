@@ -1,5 +1,5 @@
 {
-	"name": "elastic",
+	"name": "aboehm-elastic",
 	"version": "0.1.0",
 	"author": "Alexander Böhm",
 	"summary": "Basic management of ELK software stack",
