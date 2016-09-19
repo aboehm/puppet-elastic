@@ -10,7 +10,7 @@ class elastic (
   $use_kibana        = $elastic::params::use_kibana,
 ) inherits elastic::params {
 
-  validate_re($ensure, 'present|installed|purged|absent|held')
+  validate_re($ensure, 'present|installed|purged|absent|held|latest')
   validate_bool($use_elasticsearch, true, false)
   validate_bool($use_logstash, true, false)
   validate_bool($use_kibana, true, false)

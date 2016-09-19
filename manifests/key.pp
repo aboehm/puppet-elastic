@@ -10,14 +10,14 @@ class elastic::key (
 ) {
   include apt
 
-  validate_re($ensure, 'present|installed|purged|absent|held')
+  validate_re($ensure, 'present|installed|purged|absent|held|latest')
   validate_re($key_id, '[0-9a-fA-F]+')
   validate_re($keyserver, '[0-9a-fA-Z\.\-\_]+')
 
   $ea = $ensure ? {
-    /present|installed/ => file,
-    /purged|absent/     => absent,
-    default             => false,
+    /present|installed|latest/ => 'file',
+    /purged|absent/            => 'absent',
+    default                    => false,
   }
 
   if $ea != false {
