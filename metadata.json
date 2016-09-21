@@ -8,6 +8,9 @@
 	"project_page": "https://github.com/aboehm/puppet-elastic",
 	"issues_url": "https://github.com/aboehm/puppet-elastic/issues",
 	"dependencies": [
+		{"name": "aboehm/elasticsearch", "version_requirement": ">= 0.1.0"},
+		{"name": "aboehm/kibana", "version_requirement": ">= 0.1.0"},
+		{"name": "aboehm/logstash", "version_requirement": ">= 0.1.0"},
 		{"name": "puppetlabs/apt", "version_requirement": ">= 0.4.0"},
 		{"name": "puppetlabs/stdlib","version_requirement":">= 1.0.0"}
 	],
