@@ -1,6 +1,14 @@
-# Class: elastic
+# == Class: elastic
 #
-# manage a standard ELK installation
+# Manage a standard ELK installation
+#
+# === Authors
+#
+# Alexander Böhm <alxndr.boehm@gmail.com>
+#
+# === Copyright
+#
+# Copyright 2016 Alexander Böhm
 #
 
 class elastic (
