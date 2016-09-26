@@ -28,27 +28,18 @@ class elastic (
   } )
 
   if $use_logstash == true {
-    Class['elastic::key'] ->
-    Class['logstash']
-
     ensure_resource( 'class', 'logstash', {
       ensure => $ensure,
     } )
   }
 
   if $use_elasticsearch == true {
-    Class['elastic::key'] ->
-    Class['elasticsearch']
-
     ensure_resource( 'class', 'elasticsearch', {
       ensure => $ensure,
     } )
   }
 
   if $use_kibana == true {
-    Class['elastic::key'] ->
-    Class['kibana']
-
     ensure_resource( 'class', 'kibana', {
       ensure => $ensure,
     } )
