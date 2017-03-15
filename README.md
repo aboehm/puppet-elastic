@@ -65,6 +65,7 @@ Include module and configure with hiera.
 
 * `elastic`: Manage key and ELK installation
 * `elastic::key`: Define behavior for repository key from elastic.co
+* `elastic::repo`: Manage elastic repository
 * `elastic::params`: Standard values of parameters
 
 ## Limitations

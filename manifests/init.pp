@@ -13,6 +13,7 @@
 
 class elastic (
   $ensure            = $elastic::params::ensure,
+  $release           = $elastic::params::release,
   $use_elasticsearch = $elastic::params::use_elasticsearch,
   $use_logstash      = $elastic::params::use_logstash,
   $use_kibana        = $elastic::params::use_kibana,
@@ -23,9 +24,10 @@ class elastic (
   validate_bool($use_logstash, true, false)
   validate_bool($use_kibana, true, false)
 
-  ensure_resource( 'class', 'elastic::key', {
-    ensure    => $ensure,
-  } )
+  class {'elastic::repo':
+    ensure  => $ensure,
+    release => $release,
+  }
 
   if $use_logstash == true {
     ensure_resource( 'class', 'logstash', {
