@@ -19,6 +19,8 @@ class elastic::params {
  
   $include_src     = false
   $include_deb     = true
+
+  $release         = '5.x'
 }
 
 # vi: set ft=puppet expandtab shiftwidth=2 tabstop=2 :
